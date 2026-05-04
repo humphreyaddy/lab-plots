@@ -1,0 +1,16 @@
+id,source_stage,target_stage,flow_value
+F01,Inflow_North,Filtered_A,124
+F02,Inflow_North,Filtered_B,86
+F03,Inflow_North,Filtered_C,32
+F04,Inflow_South,Filtered_A,55
+F05,Inflow_South,Filtered_B,141
+F06,Inflow_South,Filtered_C,71
+F07,Inflow_East,Filtered_A,38
+F08,Inflow_East,Filtered_B,93
+F09,Inflow_East,Filtered_C,150
+F10,Filtered_A,Output_keep,168
+F11,Filtered_A,Output_drop,49
+F12,Filtered_B,Output_keep,210
+F13,Filtered_B,Output_drop,110
+F14,Filtered_C,Output_keep,184
+F15,Filtered_C,Output_drop,69

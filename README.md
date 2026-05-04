@@ -43,9 +43,20 @@ from anywhere. It runs from `file://` too.
 
 ## Sample data
 
-`public/examples/sample_metadata.csv` and `public/examples/sample_tree.nwk`
-are included. They're synthetic and small; adequate to verify any of the
-three tools end-to-end.
+Three demo files under `public/examples/`, all synthetic and domain-neutral
+(no real data, no taxa, no diagnoses):
+
+| File | What it exercises |
+|---|---|
+| `lab_demo_metadata.csv` (25 rows × 16 cols: `id` + 4 categorical + 11 numeric) | All three tools. Use the matching tree for the tree tool, pick numeric `metric_*` and `abundance_*` columns for the heatmap, flow `group → region → treatment → cohort` for the sankey. |
+| `lab_demo_tree.nwk` (25 tips, structured by `group`) | Tree tool. Tips line up 1:1 with the IDs in `lab_demo_metadata.csv`. Color tips by `group` to see the structure recovered visually. |
+| `sankey_pairs_demo.csv` (15 rows: source / target / value triples) | Sankey "pairs" mode — `source_stage` → `target_stage`, weighted by `flow_value`. |
+| `sample_metadata.csv` + `sample_tree.nwk` (10 rows / 10 tips) | Quick smoke test if you want a smaller fixture. |
+
+**Quick walkthrough:** open the live site, click any tile, drop the
+matching demo file. The app auto-detects the ID column, profiles the rest,
+and routes you into the tool. For trees, drop `lab_demo_metadata.csv` AND
+`lab_demo_tree.nwk` — the metadata is what colors the tips.
 
 ## Architecture
 
